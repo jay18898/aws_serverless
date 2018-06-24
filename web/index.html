@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+   
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+   
+    <link rel="stylesheet" type="text/css" href="css/st.css"/>
+<script>
+function fn()
+{
+	var name=document.getElementById("nm").value;
+        var cno=document.getElementById("cno").value;
+	var em=document.getElementById("em").value;
+	var pwd=document.getElementById("pwd").value;
+
+	window.location.href="https://h9tzjx2rld.execute-api.ap-south-1.amazonaws.com/lambdas1/lambdaresource?name="+name+"&cno="+cno+"&em="+em+"&pwd="+pwd;
+        
+        
+}
+
+</script>
+</head>
+    <body>
+        <div class="login-box" style="height: 500px;">
+<img src="{% static 'css/lol.png' %}" class="avatar">
+<h1>Registration</h1>
+
+
+<form>
+
+    <p>Name</p>
+    <input type="text" name="nm" placeholder="Enter Name" id="nm">
+
+    <p>Password</p>
+    <input type="password" name="pwd" placeholder="Enter Password" id="pwd">
+
+    <p>Email</p>
+    <input type="text" name="em" placeholder="Enter EmailID" id="em">
+
+    <p>ContactNo</p>
+    <input type="text" name="cno" placeholder="Enter ContactNO" id="cno">
+
+  
+    <input type="button" value="Register" onclick="fn()">
+
+</form>
+   
+
+
+</div>
+    </body>
+</html>
